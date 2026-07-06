@@ -1,0 +1,224 @@
+@import "tailwindcss";
+
+/*
+  CoverDial design system — simplified, semantic tokens.
+  Derived from design/DESIGN.md but flattened into readable, purpose-named
+  tokens instead of the raw Material-3 dump from Stitch.
+  Aesthetic: strictly monochrome, high-density, no color, no dark mode.
+*/
+@theme {
+  /* Surfaces (light → structural) */
+  --color-canvas: #f9f9fa; /* app background */
+  --color-surface: #ffffff; /* cards, document, containers */
+  --color-muted: #f3f3f4; /* sidebar + subtle fills */
+  --color-muted-hover: #e8e8e9; /* hover state on muted surfaces */
+
+  /* Lines */
+  --color-border: #e4e4e7; /* 1px hairline borders */
+
+  /* Text */
+  --color-foreground: #1a1c1d; /* primary text + headings */
+  --color-muted-foreground: #444748; /* secondary text, labels, icons */
+  --color-subtle: #747878; /* placeholders, hints, disabled */
+
+  /* Actions (monochrome — black is the accent) */
+  --color-primary: #1a1a1a; /* buttons, active states, high emphasis */
+  --color-primary-foreground: #ffffff; /* text/icons on primary */
+
+  /* Only functional color allowed by the brief */
+  --color-error: #ba1a1a;
+
+  /* Typography */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* Radii — 8px base, 16px for large containers */
+  --radius-DEFAULT: 0.5rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 1rem;
+
+  /* Layout rhythm */
+  --spacing-gutter: 24px;
+
+  /* Elevation — soft, layered, monochrome. Subtle but not flat. */
+  --shadow-soft: 0 1px 2px rgba(16, 17, 18, 0.04), 0 4px 12px rgba(16, 17, 18, 0.05);
+  --shadow-lift: 0 2px 4px rgba(16, 17, 18, 0.05), 0 12px 28px rgba(16, 17, 18, 0.1);
+  --shadow-pop: 0 8px 32px rgba(16, 17, 18, 0.14);
+
+  /* Motion — one easing vocabulary so everything feels related */
+  --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-fade-in: fade-in 0.4s var(--ease-out-soft) both;
+  --animate-slide-up: slide-up 0.5s var(--ease-out-soft) both;
+  --animate-scale-in: scale-in 0.16s var(--ease-out-soft) both;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  /* Depth: a faint precision dot-grid + a soft top vignette over the canvas.
+     Cards sit opaque on top; the texture reads only in the gutters. */
+  background-color: var(--color-canvas);
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(26, 28, 29, 0.045) 1px, transparent 0),
+    radial-gradient(120% 80% at 50% -10%, rgba(255, 255, 255, 0.9), transparent 60%);
+  background-size:
+    22px 22px,
+    100% 100%;
+  background-attachment: fixed;
+}
+
+/* Respect users who prefer less motion. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Material Symbols base sizing/alignment */
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+  vertical-align: middle;
+  user-select: none;
+}
+.material-symbols-outlined.filled {
+  font-variation-settings:
+    "FILL" 1,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
+/* Tiptap / ProseMirror editor content */
+.ProseMirror {
+  outline: none;
+  min-height: 100%;
+  line-height: 1.75;
+}
+.ProseMirror p {
+  margin-bottom: 1rem;
+}
+.ProseMirror p:last-child {
+  margin-bottom: 0;
+}
+.ProseMirror ul,
+.ProseMirror ol {
+  margin: 0 0 1rem 1.25rem;
+}
+.ProseMirror ul {
+  list-style: disc;
+}
+.ProseMirror ol {
+  list-style: decimal;
+}
+
+/* Thin, unobtrusive scrollbars to match the "power tool" density */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 9999px;
+}
+
+/* ---- Guided tour (driver.js) — monochrome theme ---- */
+.driver-popover.coverdial-tour {
+  background: var(--color-surface);
+  color: var(--color-foreground);
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-pop);
+  font-family: var(--font-sans);
+  padding: 1.25rem;
+  max-width: 340px;
+  margin-left: 20px;
+}
+.coverdial-tour .driver-popover-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-foreground);
+  letter-spacing: -0.01em;
+}
+.coverdial-tour .driver-popover-description {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--color-muted-foreground);
+}
+.coverdial-tour .driver-popover-progress-text {
+  font-size: 0.75rem;
+  color: var(--color-subtle);
+}
+.coverdial-tour .driver-popover-navigation-btns button {
+  background: transparent;
+  color: var(--color-muted-foreground);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  text-shadow: none;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+.coverdial-tour .driver-popover-navigation-btns button:hover {
+  background: var(--color-muted);
+  color: var(--color-foreground);
+}
+.coverdial-tour .driver-popover-next-btn {
+  background: var(--color-primary) !important;
+  color: var(--color-primary-foreground) !important;
+  border-color: var(--color-primary) !important;
+}
+.coverdial-tour .driver-popover-arrow {
+  border-color: var(--color-surface);
+}
+.coverdial-tour .driver-popover-close-btn {
+  color: var(--color-subtle);
+}
