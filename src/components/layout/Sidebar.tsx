@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils/cn";
 import { Icon } from "@/components/ui";
+import { Logo } from "./Logo";
 
 // The two primary destinations. Kept as data so the nav renders in a loop and
 // adding a screen later is a one-line change.
@@ -34,12 +35,9 @@ export function Sidebar({ isOpen, onNavigate }: SidebarProps) {
         isOpen ? "translate-x-0" : "-translate-x-full",
       )}
     >
-      {/* Wordmark */}
+      {/* Brand */}
       <div className="mb-6 px-2 py-4">
-        <h1 className="text-2xl font-black tracking-tighter text-foreground">
-          CoverDial
-        </h1>
-        <p className="text-sm text-muted-foreground">AI Assistant Active</p>
+        <Logo subtitle="Cover letter, on speed dial" markSize={40} />
       </div>
 
       {/* Primary nav */}

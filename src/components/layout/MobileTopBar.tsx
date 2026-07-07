@@ -1,6 +1,7 @@
 import { Icon } from "@/components/ui";
+import { Logo } from "./Logo";
 
-/** Slim top bar shown only below `lg`, with the menu trigger and wordmark. */
+/** Slim top bar shown only below `lg`, with the menu trigger and brand. */
 export function MobileTopBar({ onMenu }: { onMenu: () => void }) {
   return (
     <div className="sticky top-0 z-30 flex h-14 shrink-0 items-center gap-3 border-b border-border bg-muted px-4 lg:hidden">
@@ -12,9 +13,7 @@ export function MobileTopBar({ onMenu }: { onMenu: () => void }) {
       >
         <Icon name="menu" size={24} />
       </button>
-      <span className="text-lg font-black tracking-tighter text-foreground">
-        CoverDial
-      </span>
+      <Logo markSize={28} />
     </div>
   );
 }
