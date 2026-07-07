@@ -6,7 +6,7 @@ interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   /** Material Symbols ligature name. */
   icon: string;
   filled?: boolean;
-  /** Accessible label — required since the button has no visible text. */
+  /** Accessible label - required since the button has no visible text. */
   label: string;
   iconSize?: number;
 }

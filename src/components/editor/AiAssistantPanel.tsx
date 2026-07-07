@@ -13,7 +13,7 @@ interface AiAssistantPanelProps {
 
 /**
  * The AI Assistant. Sends the *current* letter plus an instruction to
- * /api/revise and applies the returned letter in place — editing what exists
+ * /api/revise and applies the returned letter in place - editing what exists
  * rather than regenerating from scratch.
  */
 export function AiAssistantPanel({ getCurrentText, onRevised }: AiAssistantPanelProps) {
@@ -24,7 +24,7 @@ export function AiAssistantPanel({ getCurrentText, onRevised }: AiAssistantPanel
   async function runRevise(text: string) {
     const letter = getCurrentText().trim();
     if (!letter) {
-      setError("There's no letter to revise yet — generate one first.");
+      setError("There's no letter to revise yet. Generate one first.");
       return;
     }
     if (!text.trim()) {

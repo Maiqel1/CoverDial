@@ -28,7 +28,7 @@ export const TOUR_STEPS: DriveStep[] = [
     popover: {
       title: "Add your resume",
       description:
-        "Upload a PDF or DOCX — it's read right in your browser and never uploaded — or paste the text directly.",
+        "Upload a PDF or DOCX (read right in your browser, never uploaded), or paste the text directly.",
       side: "right",
       align: "start",
     },
@@ -48,7 +48,7 @@ export const TOUR_STEPS: DriveStep[] = [
     popover: {
       title: "Set the tone & length",
       description:
-        "Professional, confident, friendly, formal — and how long. Tweak and regenerate freely.",
+        "Professional, confident, friendly, formal, and how long. Tweak and regenerate freely.",
       side: "top",
       align: "start",
     },

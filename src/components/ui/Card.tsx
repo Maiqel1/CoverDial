@@ -10,7 +10,7 @@ interface CardProps extends HTMLAttributes<HTMLDivElement> {
 
 /**
  * Surface container: white, hairline border, soft layered shadow for gentle
- * depth (see design/DESIGN.md > Elevation — subtle, never heavy blur).
+ * depth (see design/DESIGN.md > Elevation - subtle, never heavy blur).
  */
 export function Card({ large, interactive, className, ...props }: CardProps) {
   return (

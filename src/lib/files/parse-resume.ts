@@ -1,5 +1,5 @@
 /**
- * Resume file parsing — runs entirely in the browser, so the file never leaves
+ * Resume file parsing - runs entirely in the browser, so the file never leaves
  * the user's machine. Supports PDF (via pdf.js) and DOCX (via mammoth).
  *
  * The parser libraries are `import()`-ed lazily inside each function so they are

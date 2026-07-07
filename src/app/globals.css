@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /*
-  CoverDial design system — simplified, semantic tokens.
+  CoverDial design system - simplified, semantic tokens.
   Derived from design/DESIGN.md but flattened into readable, purpose-named
   tokens instead of the raw Material-3 dump from Stitch.
   Aesthetic: strictly monochrome, high-density, no color, no dark mode.
@@ -21,7 +21,7 @@
   --color-muted-foreground: #444748; /* secondary text, labels, icons */
   --color-subtle: #747878; /* placeholders, hints, disabled */
 
-  /* Actions (monochrome — black is the accent) */
+  /* Actions (monochrome - black is the accent) */
   --color-primary: #1a1a1a; /* buttons, active states, high emphasis */
   --color-primary-foreground: #ffffff; /* text/icons on primary */
 
@@ -31,7 +31,7 @@
   /* Typography */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 
-  /* Radii — 8px base, 16px for large containers */
+  /* Radii - 8px base, 16px for large containers */
   --radius-DEFAULT: 0.5rem;
   --radius-lg: 0.5rem;
   --radius-xl: 1rem;
@@ -39,12 +39,12 @@
   /* Layout rhythm */
   --spacing-gutter: 24px;
 
-  /* Elevation — soft, layered, monochrome. Subtle but not flat. */
+  /* Elevation - soft, layered, monochrome. Subtle but not flat. */
   --shadow-soft: 0 1px 2px rgba(16, 17, 18, 0.04), 0 4px 12px rgba(16, 17, 18, 0.05);
   --shadow-lift: 0 2px 4px rgba(16, 17, 18, 0.05), 0 12px 28px rgba(16, 17, 18, 0.1);
   --shadow-pop: 0 8px 32px rgba(16, 17, 18, 0.14);
 
-  /* Motion — one easing vocabulary so everything feels related */
+  /* Motion - one easing vocabulary so everything feels related */
   --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
   --animate-fade-in: fade-in 0.4s var(--ease-out-soft) both;
   --animate-slide-up: slide-up 0.5s var(--ease-out-soft) both;
@@ -167,7 +167,7 @@ body {
   border-radius: 9999px;
 }
 
-/* ---- Guided tour (driver.js) — monochrome theme ---- */
+/* ---- Guided tour (driver.js) - monochrome theme ---- */
 .driver-popover.coverdial-tour {
   background: var(--color-surface);
   color: var(--color-foreground);

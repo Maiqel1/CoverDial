@@ -2,8 +2,8 @@ import { cn } from "@/lib/utils/cn";
 
 interface FooterProps {
   /**
-   * "full"   — taller footer with wordmark (Generator page).
-   * "compact"— slim 48px bar (Editor page, where vertical space is precious).
+   * "full" - taller footer with wordmark (Generator page).
+   * "compact" - slim 48px bar (Editor page, where vertical space is precious).
    */
   variant?: "full" | "compact";
   className?: string;

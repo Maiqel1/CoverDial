@@ -1,7 +1,7 @@
 import { type LabelHTMLAttributes } from "react";
 import { cn } from "@/lib/utils/cn";
 
-/** Form field label — label-md typography, muted-foreground. */
+/** Form field label - label-md typography, muted-foreground. */
 export function Label({
   className,
   ...props

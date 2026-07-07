@@ -31,7 +31,7 @@ export function LetterActions({ variant = "bar", className }: LetterActionsProps
       setCopied(true);
       setTimeout(() => setCopied(false), 1500);
     } catch {
-      /* clipboard blocked — nothing actionable to show */
+      /* clipboard blocked - nothing actionable to show */
     }
   }
 

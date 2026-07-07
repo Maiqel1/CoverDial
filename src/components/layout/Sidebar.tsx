@@ -69,7 +69,7 @@ export function Sidebar({ isOpen, onNavigate }: SidebarProps) {
         })}
       </nav>
 
-      {/* New draft — primary action */}
+      {/* New draft - primary action */}
       <Link
         href="/generator"
         onClick={onNavigate}

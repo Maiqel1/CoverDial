@@ -33,7 +33,7 @@ export function GeneratorTour() {
     d.drive();
   }, []);
 
-  // First-visit auto-start (desktop only — the sidebar/anchors are hidden on mobile).
+  // First-visit auto-start (desktop only - the sidebar/anchors are hidden on mobile).
   useEffect(() => {
     let seen = "1";
     try {

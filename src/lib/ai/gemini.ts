@@ -4,7 +4,7 @@ import { AIError, type AIProvider, type GenerateTextParams } from "./provider";
 /**
  * Gemini implementation of {@link AIProvider}.
  *
- * The API key is read from the server-only `GEMINI_API_KEY` env var — this file
+ * The API key is read from the server-only `GEMINI_API_KEY` env var - this file
  * must never be imported into a client component (it runs in route handlers).
  * Model is overridable via `GEMINI_MODEL` (defaults to gemini-2.5-flash: fast,
  * cheap, and more than capable for cover letters).

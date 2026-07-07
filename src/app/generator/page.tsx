@@ -3,7 +3,7 @@ import { GeneratorView } from "@/components/generator/GeneratorView";
 import { GeneratorTour } from "@/components/tour/GeneratorTour";
 
 export const metadata = {
-  title: "Generator — CoverDial",
+  title: "Generator - CoverDial",
 };
 
 export default function GeneratorPage() {
@@ -15,7 +15,7 @@ export default function GeneratorPage() {
             Create a cover letter
           </h2>
           <p className="hidden text-sm text-muted-foreground sm:block">
-            Tailored to the role, from your resume — in seconds.
+            Tailored to the role, generated from your resume in seconds.
           </p>
         </div>
         <GeneratorTour />

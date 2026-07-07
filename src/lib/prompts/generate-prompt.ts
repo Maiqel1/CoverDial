@@ -26,6 +26,7 @@ Rules:
 - Address the letter to the hiring team; if no name is available use "Dear Hiring Manager,".
 - Open with a strong hook, connect the candidate's real experience to the role's needs, and close with a confident call to action.
 - Use natural, human prose. Avoid clichés ("I am writing to express"), buzzword stuffing, and obvious AI phrasing.
+- Never use em dashes or en dashes (the long dash characters). Use commas, periods, parentheses, or a plain hyphen instead.
 - End with "Sincerely," followed by the candidate's name if it appears in the resume; otherwise omit the signature name.`;
 
 /** Assemble the system + user prompt for a generation request. */
@@ -42,7 +43,7 @@ export function buildGeneratePrompt(input: GeneratorInput): {
 
   const prompt = `Write a cover letter tailored to this job, based on the candidate's resume.
 
-Tone: ${tone} — ${TONE_GUIDANCE[tone]}.
+Tone: ${tone} - ${TONE_GUIDANCE[tone]}.
 Length: ${LENGTH_GUIDANCE[length]}.
 
 === CANDIDATE RESUME ===

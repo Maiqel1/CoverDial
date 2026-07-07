@@ -21,7 +21,7 @@ interface SelectProps {
 /**
  * A custom listbox dropdown (replacing the flat native <select>): animated open,
  * checkmark on the active option, full keyboard support, and outside-click /
- * Escape to close. Controlled — pairs with a React Hook Form `Controller`.
+ * Escape to close. Controlled - pairs with a React Hook Form `Controller`.
  */
 export function Select({
   value,

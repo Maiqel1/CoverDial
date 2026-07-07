@@ -4,7 +4,7 @@ import { LetterActions } from "@/components/shared/LetterActions";
 import { Chip } from "@/components/ui";
 
 export const metadata = {
-  title: "Editor — CoverDial",
+  title: "Editor - CoverDial",
 };
 
 export default function EditorPage() {
@@ -17,7 +17,7 @@ export default function EditorPage() {
           <h2 className="truncate text-lg font-bold text-foreground md:text-2xl">
             Edit Cover Letter
           </h2>
-          {/* Honest status: this is a working draft held in the browser — no cloud. */}
+          {/* Honest status: this is a working draft held in the browser - no cloud. */}
           <Chip icon="edit_note" className="hidden sm:inline-flex">
             Draft
           </Chip>

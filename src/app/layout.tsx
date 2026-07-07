@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "CoverDial — AI Cover Letter Generator",
+  title: "CoverDial - AI Cover Letter Generator",
   description:
     "Generate and refine tailored cover letters with AI. Fast, minimal, professional.",
 };
@@ -31,7 +31,7 @@ export default function RootLayout({
         {/*
           Material Symbols icon font. We load it via a stylesheet link (rather
           than next/font) because it is a variable icon font addressed by
-          ligature names — matching the icon set used in the Stitch design.
+          ligature names - matching the icon set used in the Stitch design.
         */}
         <link
           rel="stylesheet"

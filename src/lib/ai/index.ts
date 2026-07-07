@@ -5,7 +5,7 @@ import { createGeminiProvider } from "./gemini";
  * The single place the app chooses its AI provider.
  *
  * To switch providers later (e.g. Claude, OpenAI), implement the AIProvider
- * interface in a sibling file and return it here — nothing else changes.
+ * interface in a sibling file and return it here - nothing else changes.
  */
 export function getAIProvider(): AIProvider {
   return createGeminiProvider();

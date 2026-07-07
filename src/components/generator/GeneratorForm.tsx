@@ -22,7 +22,7 @@ interface GeneratorFormProps {
 /**
  * The left-hand input panel. Owns the form state (React Hook Form) and
  * validation (Zod), but delegates *what happens on submit* to the parent via
- * `onGenerate` — so business logic stays out of this presentational form.
+ * `onGenerate` - so business logic stays out of this presentational form.
  */
 export function GeneratorForm({ onGenerate, isGenerating }: GeneratorFormProps) {
   const {
@@ -52,7 +52,7 @@ export function GeneratorForm({ onGenerate, isGenerating }: GeneratorFormProps) 
       </h3>
 
       <form onSubmit={handleSubmit(onGenerate)} className="space-y-6" noValidate>
-        {/* Resume — upload or paste */}
+        {/* Resume - upload or paste */}
         <div data-tour="resume">
           <ResumeInput
             value={resumeText}

@@ -12,7 +12,7 @@ export const generatorSchema = z.object({
   resumeText: z
     .string()
     .trim()
-    .min(30, "Please add your resume — upload a file or paste at least a few lines."),
+    .min(30, "Please add your resume by uploading a file or pasting at least a few lines."),
   jobDescription: z
     .string()
     .trim()
@@ -27,7 +27,7 @@ export const generatorSchema = z.object({
     .or(z.literal("")),
 });
 
-/** Form values inferred from the schema — used to type the React Hook Form. */
+/** Form values inferred from the schema - used to type the React Hook Form. */
 export type GeneratorFormValues = z.infer<typeof generatorSchema>;
 
 /**

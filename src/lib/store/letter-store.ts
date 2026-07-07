@@ -8,7 +8,7 @@ import { persist, createJSONStorage } from "zustand/middleware";
  *
  * Persisted to localStorage so a page refresh keeps your work (no server/DB).
  * `skipHydration` is on: the store starts empty to match the server render,
- * then `StoreHydrator` rehydrates it from localStorage after mount — avoiding
+ * then `StoreHydrator` rehydrates it from localStorage after mount - avoiding
  * React hydration mismatches in the App Router.
  */
 interface LetterState {

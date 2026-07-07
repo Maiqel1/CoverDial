@@ -10,8 +10,8 @@ import { MobileTopBar } from "./MobileTopBar";
  * lg+, an off-canvas drawer below it). Each page renders its own header, body
  * and Footer inside `children`.
  *
- * The drawer closes via `onNavigate` (every nav link) and the backdrop — the
- * only ways to leave a screen from the drawer — so no route-watching effect is
+ * The drawer closes via `onNavigate` (every nav link) and the backdrop - the
+ * only ways to leave a screen from the drawer - so no route-watching effect is
  * needed.
  */
 export function AppShell({ children }: { children: React.ReactNode }) {

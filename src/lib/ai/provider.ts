@@ -2,7 +2,7 @@
  * Provider-agnostic AI seam.
  *
  * Everything above this line (routes, prompt builders) talks only to this
- * interface — it knows how to turn a prompt into text, nothing more. Swapping
+ * interface - it knows how to turn a prompt into text, nothing more. Swapping
  * Gemini for Claude or OpenAI means writing one new implementation and changing
  * one line in `index.ts`; no feature code changes.
  */

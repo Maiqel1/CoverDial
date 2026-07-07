@@ -1,4 +1,4 @@
-# CoverDial — AI Cover Letter Generator
+# CoverDial - AI Cover Letter Generator
 
 Generate a tailored cover letter from your resume + a job description, then
 refine it with a rich-text editor and an AI Assistant. Export to PDF or DOCX.
@@ -7,12 +7,12 @@ refine it with a rich-text editor and an AI Assistant. Export to PDF or DOCX.
 
 - **Next.js 16** (App Router) + **React 19** + **TypeScript**
 - **Tailwind CSS v4** (CSS-first `@theme`, no `tailwind.config.js`)
-- **React Hook Form + Zod** — forms & validation
-- **Zustand** (persisted to `localStorage`) — the shared letter
-- **Google Gemini** (`@google/genai`, `gemini-2.5-flash`) — all AI
-- **pdf.js + mammoth** — resume parsing (PDF / DOCX), in-browser
-- **jsPDF + docx** — export
-- **Tiptap** — rich-text editor
+- **React Hook Form + Zod** - forms & validation
+- **Zustand** (persisted to `localStorage`) - the shared letter
+- **Google Gemini** (`@google/genai`, `gemini-2.5-flash`) - all AI
+- **pdf.js + mammoth** - resume parsing (PDF / DOCX), in-browser
+- **jsPDF + docx** - export
+- **Tiptap** - rich-text editor
 
 ## Getting started
 
@@ -76,7 +76,7 @@ src/
 
 ## Where things live
 
-- **Prompts:** `src/lib/prompts/` — generation and revision, separate from the
+- **Prompts:** `src/lib/prompts/` - generation and revision, separate from the
   API call so they can be tuned in isolation.
 - **API key:** `GEMINI_API_KEY` in `.env.local`, read only in
   `src/lib/ai/gemini.ts` (server).
@@ -85,8 +85,8 @@ src/
 
 ## Swapping Gemini for another provider
 
-Implement the `AIProvider` interface (one `generateText` method) in a new file —
-e.g. `src/lib/ai/openai.ts` or `claude.ts` — and return it from
+Implement the `AIProvider` interface (one `generateText` method) in a new file - 
+e.g. `src/lib/ai/openai.ts` or `claude.ts` - and return it from
 `getAIProvider()` in `src/lib/ai/index.ts`. No feature/UI code changes; prompts
 and routes are provider-agnostic.
 
@@ -102,5 +102,5 @@ and routes are provider-agnostic.
 ## Notes
 
 - No dark mode by design (monochrome light theme only).
-- The resume is parsed entirely in the browser — files never leave the device.
+- The resume is parsed entirely in the browser - files never leave the device.
 - The current letter persists locally; there is no server-side storage.
